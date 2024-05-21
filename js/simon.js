@@ -11,3 +11,18 @@ for (let n = 0; n < 5; n++) {
 console.log(randomNums);
 
 setTimeout(guessNumbers, 5000);
+
+function guessNumbers() {
+    numOnPage.innerHTML = '';
+    console.log('tempo scaduto');
+    let userNumbers = [];
+
+    setTimeout(() => {
+        for (let n = 0; n < 5; n++) {
+            let userNumber = parseInt(prompt('ricorda i numeri appena apparsi uno alla volta'));
+            userNumbers.push(userNumber)
+        };
+        console.log(userNumbers);
+
+    });
+}
