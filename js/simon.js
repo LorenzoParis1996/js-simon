@@ -7,3 +7,7 @@ for (let n = 0; n < 5; n++) {
     numOnPage.innerHTML = randomNums;
 
 }
+
+console.log(randomNums);
+
+setTimeout(guessNumbers, 5000);
