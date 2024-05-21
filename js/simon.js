@@ -19,10 +19,19 @@ function guessNumbers() {
 
     setTimeout(() => {
         for (let n = 0; n < 5; n++) {
-            let userNumber = parseInt(prompt('ricorda i numeri appena apparsi uno alla volta'));
+            let userNumber = Number.parseInt(prompt('ricorda i numeri appena apparsi uno alla volta'), 10);
             userNumbers.push(userNumber)
         };
         console.log(userNumbers);
 
-    });
+        for (let i = 0; i < 5; i++) {
+            if (randomNums[i] === userNumbers[i]) {
+                document.querySelector('h1').innerHTML += ' numero corretto: ' + userNumbers[i];
+            } else {
+                document.querySelector('h1').innerHTML += ' numero di simon: ' + randomNums[i];
+            }
+
+        }
+
+    }, 100);
 }
